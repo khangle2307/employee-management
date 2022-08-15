@@ -31,6 +31,7 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -39,7 +40,8 @@ registerLocaleData(en);
     AdminComponent,
     EmployeeComponent,
     EmployeeListComponent,
-    EmployeeAddComponent
+    EmployeeAddComponent,
+    EmployeeEditComponent
   ],
   imports: [
     BrowserModule,
