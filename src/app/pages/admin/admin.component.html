@@ -1,6 +1,5 @@
 <nz-layout class="app-layout">
-   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
-      [nzTrigger]="null">
+   <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md">
       <div class="sidebar-logo">
          <a routerLink="">
             <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
@@ -22,10 +21,33 @@
    </nz-sider>
    <nz-layout>
       <nz-header>
-         <div class="app-header">
-            <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-               <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-            </span>
+         <div class="app-header" nz-row nzAlign="middle" nzJustify="space-between">
+            <div nz-col>
+               <form class="form-search" nz-form>
+                  <nz-input-group [nzSuffix]="suffixIconSearch">
+                     <input type="text" nz-input placeholder="Tìm kiếm..." style="width: 300px;" />
+                  </nz-input-group>
+                  <ng-template #suffixIconSearch>
+                     <i nz-icon nzType="search"></i>
+                  </ng-template>
+               </form>
+            </div>
+            <div nz-col>
+               <a class="account-name" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+                  Xin chào,Admin
+                  <i nz-icon nzType="down"></i>
+               </a>
+               <nz-dropdown-menu #menu="nzDropdownMenu">
+                  <ul nz-menu>
+                     <li nz-menu-item>Cài đặt thông tin</li>
+                     <li nz-menu-divider></li>
+                     <li nz-menu-item>
+                        <i nz-icon nzType="logout" nzTheme="outline" style="margin-right: 5px;"></i>
+                        Đăng xuất
+                     </li>
+                  </ul>
+               </nz-dropdown-menu>
+            </div>
          </div>
       </nz-header>
       <nz-content>

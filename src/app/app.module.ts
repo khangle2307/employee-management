@@ -25,6 +25,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 registerLocaleData(en);
@@ -56,7 +58,9 @@ registerLocaleData(en);
     NzButtonModule,
     NzTypographyModule,
     NzDatePickerModule,
-    NzSelectModule
+    NzSelectModule,
+    NzGridModule,
+    NzDropDownModule
   ],
 
   providers: [{ provide: NZ_I18N, useValue: en_US }],
