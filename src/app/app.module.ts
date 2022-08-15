@@ -15,12 +15,17 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { AdminComponent } from './pages/admin/admin.component';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +35,12 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
+    NzDividerModule,
     NzMenuModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzTableModule
   ],
+
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
