@@ -1,0 +1,36 @@
+<h3 nz-typography>Thêm nhân viên</h3>
+<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+   <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập tên" nzHasFeedback>
+         <label for="userName">Họ và tên</label>
+         <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input formControlName="userName" placeholder="Họ và tên" />
+         </nz-input-group>
+      </nz-form-control>
+   </nz-form-item>
+   <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập ngày sinh" nzHasFeedback>
+         <label for="birthDay">Ngày sinh</label>
+         <nz-date-picker formControlName="birthDay" nzPlaceHolder="Ngày sinh"></nz-date-picker>
+      </nz-form-control>
+   </nz-form-item>
+   <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập vị trí" nzHasFeedback>
+         <label for="position">Vị trí</label>
+         <nz-select formControlName="position">
+            <nz-option nzValue="trưởng phòng" nzLabel="Trưởng phòng"></nz-option>
+            <nz-option nzValue="nhân viên" nzLabel="Nhân viên"></nz-option>
+            <nz-option nzValue="Nhân viên nhân sự" nzLabel="Nhân viên nhân sự"></nz-option>
+         </nz-select>
+      </nz-form-control>
+   </nz-form-item>
+   <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập mật khẩu" nzHasFeedback>
+         <label for="password">Mật khẩu</label>
+         <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="password" placeholder="Mật khẩu" />
+         </nz-input-group>
+      </nz-form-control>
+   </nz-form-item>
+   <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Thêm</button>
+</form>

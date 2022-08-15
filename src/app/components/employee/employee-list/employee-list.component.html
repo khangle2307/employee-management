@@ -1,21 +1,27 @@
 <nz-table #employeeTable [nzData]="data">
    <thead>
       <tr>
-         <th>Name</th>
-         <th>Age</th>
-         <th>Address</th>
-         <th>Action</th>
+         <th>STT</th>
+         <th>Tên</th>
+         <th>Tuổi</th>
+         <th>Địa chỉ</th>
+         <th>Thao tác</th>
       </tr>
    </thead>
    <tbody>
       <tr *ngFor="let data of employeeTable.data">
+         <td>{{ data.key }}</td>
          <td>{{data.name}}</td>
          <td>{{data.age}}</td>
          <td>{{data.address}}</td>
          <td>
-            <a>Action 一 {{data.name}}</a>
+            <a [routerLink]="['id','edit']">
+               <i nz-icon nzType="edit" nzTheme="outline" style="color: #000;"></i>
+            </a>
             <nz-divider nzType="vertical"></nz-divider>
-            <a>Delete</a>
+            <i nz-icon nzType="delete" nzTheme="outline" nz-popconfirm nzPopconfirmTitle="bạn có muốn xóa không ?"
+               (nzOnConfirm)="confirm()" (nzOnCancel)="cancel()" style="cursor: pointer;">
+            </i>
          </td>
       </tr>
    </tbody>

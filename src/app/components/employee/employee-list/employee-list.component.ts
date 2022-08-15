@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { Person } from 'src/models/person';
 
 @Component({
@@ -28,7 +29,16 @@ export class EmployeeListComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+
+  confirm = () => {
+    this.message.success('xóa thành công !');
+  }
+
+  cancel = () => {
+    this.message.info('hủy thành công');
+  }
+
+  constructor(private message: NzMessageService) { }
 
   ngOnInit(): void {
   }
