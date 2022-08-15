@@ -1,3 +1,6 @@
+<!-- Header -->
+<h3 nz-typography>Danh sách nhân viên</h3>
+<!-- Table -->
 <nz-table #employeeTable [nzData]="data">
    <thead>
       <tr>
@@ -19,8 +22,7 @@
                <i nz-icon nzType="edit" nzTheme="outline" style="color: #000;"></i>
             </a>
             <nz-divider nzType="vertical"></nz-divider>
-            <i nz-icon nzType="delete" nzTheme="outline" nz-popconfirm nzPopconfirmTitle="bạn có muốn xóa không ?"
-               (nzOnConfirm)="confirm()" (nzOnCancel)="cancel()" style="cursor: pointer;">
+            <i nz-icon nzType="delete" nzTheme="outline" (click)="showDeleteConfirm()" style="cursor: pointer;">
             </i>
          </td>
       </tr>

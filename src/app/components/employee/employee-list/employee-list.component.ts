@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { NzModalService } from 'ng-zorro-antd/modal';
 import { Person } from 'src/models/person';
 
 @Component({
@@ -8,6 +9,7 @@ import { Person } from 'src/models/person';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
+  isVisible = false;
   data: Person[] = [
     {
       key: '1',
@@ -27,18 +29,25 @@ export class EmployeeListComponent implements OnInit {
       age: 32,
       address: 'Sidney No. 1 Lake Park'
     }
+
   ];
-
-
-  confirm = () => {
-    this.message.success('xóa thành công !');
+  showDeleteConfirm(): void {
+    this.modal.confirm({
+      nzTitle: 'Bạn có muốn xóa không',
+      nzOkText: 'Có',
+      nzOkType: 'primary',
+      nzOkDanger: true,
+      nzOnOk: () => this.message.success('xóa thành công!'),
+      nzCancelText: 'Hủy',
+      nzOnCancel: () => this.message.info('hủy thành công!')
+    });
   }
 
-  cancel = () => {
-    this.message.info('hủy thành công');
-  }
 
-  constructor(private message: NzMessageService) { }
+  constructor(
+    private message: NzMessageService,
+    private modal: NzModalService
+  ) { }
 
   ngOnInit(): void {
   }

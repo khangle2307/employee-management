@@ -27,14 +27,17 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
+import { EmployeeComponent } from './pages/employee/employee.component';
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
+    EmployeeComponent,
     EmployeeListComponent,
     EmployeeAddComponent
   ],
@@ -60,7 +63,8 @@ registerLocaleData(en);
     NzDatePickerModule,
     NzSelectModule,
     NzGridModule,
-    NzDropDownModule
+    NzDropDownModule,
+    NzModalModule
   ],
 
   providers: [{ provide: NZ_I18N, useValue: en_US }],
