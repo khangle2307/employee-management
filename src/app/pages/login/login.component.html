@@ -1,0 +1,22 @@
+<div class="container">
+   <h3 nz-typography>Đăng nhập</h3>
+   <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+      <nz-form-item>
+         <nz-form-control nzErrorTip="Vui lòng nhập email !" nzHasFeedback>
+            <nz-input-group nzPrefixIcon="user">
+               <input type="text" nz-input formControlName="email" placeholder="Email" />
+            </nz-input-group>
+         </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+         <nz-form-control nzErrorTip="Vui lòng nhập mật khẩu !" nzHasFeedback>
+            <nz-input-group nzPrefixIcon="lock">
+               <input type="password" nz-input formControlName="password" placeholder="Mật khẩu" />
+            </nz-input-group>
+         </nz-form-control>
+      </nz-form-item>
+
+      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Đăng nhập</button>
+      <a class="register" routerLink="/register">Chưa có tải khoản?Đăng ký!</a>
+   </form>
+</div>

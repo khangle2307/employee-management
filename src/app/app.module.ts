@@ -32,6 +32,8 @@ import { EmployeeListComponent } from './components/employee/employee-list/emplo
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
+import { LoginComponent } from './pages/login/login.component';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -41,7 +43,8 @@ registerLocaleData(en);
     EmployeeComponent,
     EmployeeListComponent,
     EmployeeAddComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

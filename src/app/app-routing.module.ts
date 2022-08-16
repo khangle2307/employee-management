@@ -5,6 +5,7 @@ import { EmployeeEditComponent } from './components/employee/employee-edit/emplo
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/admin' },
@@ -17,7 +18,10 @@ const routes: Routes = [
       { path: 'edit', component: EmployeeEditComponent }
     ]
   },
-
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
