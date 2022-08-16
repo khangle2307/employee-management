@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './components/employee/employee-list/emplo
 import { AdminComponent } from './pages/admin/admin.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/admin' },
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 

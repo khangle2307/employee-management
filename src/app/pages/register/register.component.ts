@@ -2,17 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
   validateForm!: FormGroup;
 
   submitForm(): void {
     if (this.validateForm.valid) {
       console.log('submit', this.validateForm.value);
-      window.location.replace('/admin')
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
         if (control.invalid) {

@@ -33,6 +33,7 @@ import { EmployeeAddComponent } from './components/employee/employee-add/employe
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 registerLocaleData(en);
 
@@ -44,7 +45,8 @@ registerLocaleData(en);
     EmployeeListComponent,
     EmployeeAddComponent,
     EmployeeEditComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
